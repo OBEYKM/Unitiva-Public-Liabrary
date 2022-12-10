@@ -130,5 +130,86 @@
 
 
 
+////////////////////////////////// Mon section //////////////////////////////////////////
+
+function addnewMons(title="", image="" , src="" , refbiography=[] , candidate="",course=""){
+
+    let b = {};
+
+    b.title = title;
+    b.image = image;
+    b.src = src;
+    b.refbiography = refbiography;
+    b.candidate = candidate;
+    b.course = course;
+
+    
+    let objMon =  JSON.parse(localStorage.getItem("mons"));
+
+    if(objMon==null){
+
+        // creating new key with first val
+        localStorage.setItem("mons",JSON.stringify({
+            arr : [b]
+        }));
+
+        return;
+    }
+
+    let arrMons = objMon["arr"];
 
 
+    if (containsMon(b)) {
+        console.log("Monography "+b.title+" already exists");
+        return;
+    }
+    
+    arrMons.push(b);
+
+
+
+    localStorage.setItem("mons" , JSON.stringify({
+        arr : arrMons
+    }))
+    
+}
+
+
+function getAllMons(){
+    return JSON.parse(localStorage.getItem("mons"))["arr"];
+}
+
+function getMon(title){
+
+    let arrMons = getAllMons();
+
+    for(mon of arrMons){
+
+        if(title==mon.title){
+            return mon;
+        }
+
+    }
+
+    return false;
+
+}
+
+function containsMon(mon){
+
+    console.log("=========== checking duplication =================");
+
+   let arrMons =  JSON.parse(localStorage.getItem("mons"))["arr"];
+
+   for( m  of arrMons  ){
+
+       if (m.title == mon.title ) {
+        return true;
+       }
+
+   }
+
+//    localStorage.getItem("books");
+   return false;
+
+}

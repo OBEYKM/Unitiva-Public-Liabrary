@@ -71,14 +71,14 @@
 
         <div style="padding:1rem 1rem;">
             <form class="d-flex" role="search">
-                <input class="form-control me-2" style="width:30%;" type="search" placeholder="Procurar Monografia">
+                <input class="form-control me-2" style="width:30%;" type="search" placeholder="Procurar monografia">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
         </div>
 
         <div style="text-align:right; margin-right:2rem; font-family: 'Times New Roman', Times, serif; font-weight: bold; font-size: medium;">
             <span>
-              <span>Monografia : </span>  <span id="nBooksFound" >4</sapn>
+              <span>Monografias : </span>  <span id="nBooksFound" >0</sapn>
             </span>
         </div>
 
@@ -87,9 +87,9 @@
             <div style="width:95%; background-color: aliceblue; margin:.4rem auto; padding:2rem; " >
 
 
-                <div class="row">
+                <div class="row" id="bookContainer">
 
-                    <div class="col-md-6 col-lg-3 bookcell rowBook" >
+                    <!-- <div class="col-md-6 col-lg-3 bookcell rowBook" >
 
                             <img src="images/logoUnitiva.jfif" width="50%" alt=""> <br>
                             <span class="bookName">Book Name1</span>
@@ -101,9 +101,9 @@
                         <img src="images/logoUnitiva.jfif" width="50%" alt=""> <br>
                         <span>Book Name2</span>
 
-                    </div>
+                    </div> -->
 
-                    <div class="col-md-6 col-lg-3 bookcell rowBook">
+                    <!-- <div class="col-md-6 col-lg-3 bookcell rowBook">
 
                         <img src="images/logoUnitiva.jfif" width="50%" alt=""> <br>
                         <span>Book Name3</span>
@@ -172,7 +172,7 @@
                         <img src="images/logoUnitiva.jfif" width="50%" alt=""> <br>
                         <span>Book Name12</span>
 
-                    </div>
+                    </div> -->
 
                 </div>
 
@@ -199,38 +199,58 @@
 
     <section id="single-book">
 
+        <div>
+            <button style="margin-left:2rem;" id="backtoBooks" type="button" class="btn btn-outline-primary btnControl">back</button>
+        </div>
         <div style="width:95%; background-color: aliceblue; margin:.4rem auto; padding:2rem;">
+            
+            
+            
             <h2 id="titleBook">Hi , on single book!</h2>
 
-
+            
             <div class="row">
 
                 <div class="col-lg-6 col-md-12">
                     <!-- <img width="54%"  style="margin:2rem auto; text-align: center;" src="images/logoUnitiva.jfif" alt=""> -->
-                    <iframe width="100%" height="100%" src="dbfiles\books\Mankiw_01_Português.pdf" frameborder="0"></iframe>
 
-                    <button >
-                        <a style="color:#c68b38;" target="_blank" href="dbfiles\books\Mankiw_01_Português.pdf">view</a>
-                    </button>
+                    <div class="row">
+
+                        <div class="col-lg-12" >
+
+                            <iframe id="bookSrc" style="height:20rem;"  width="100%" height="100%" src="" frameborder="1">
+                           
+                            </iframe>
+                        </div>
+                       
+    
+                    </div>
+                   
+                    <div class="class=col-lg-12">
+                        <button>
+                            <a style="color:#c68b38;" id="btnSrc" target="_blank" href="">view</a>
+                        </button>
+                    </div>
+                  
 
                 </div>
 
                 <div class="col-lg-6">
 
                     <div style="padding:0.3rem;">
-                        <h4>Autor:</h4>
+                        <h4>Candidato:</h4>
                         <p id="authorName">Name of the author</p>
                     </div>
 
                     <div style="padding:0.3rem;" >
-                        <h4>Ano (Edição):</h4>
-                        <p id="authorName">Name of the author</p>
+                        <h4>Curso:</h4>
+                        <p id="yearEdition">year</p>
                     </div>
 
                     <div style="padding:0.3rem;" >
                         <h4>Referência bibliográfica:</h4>
                         
-                        <ul>
+                        <ul id="bioRef">
                             <li>Referência1</li>
                             <li>Referência2</li>
                             <li>Referência3</li>
@@ -255,11 +275,10 @@
 
       
 
-        <div>
-            <button style="margin-left:2rem;" id="backtoBooks" type="button" class="btn btn-outline-primary btnControl">back</button>
-        </div>
+       
 
     </section>
+
 
 
     <footer class="py-3">
@@ -292,7 +311,15 @@
 
 <!-- obys js file -->
 
-<script src="js-obys/events/click.js"></script>
+
+
+<script src="js-obys/db.js"></script>
+
+<script src="js-obys/monScripts/addMons.js"></script>
+
+<script src="js-obys/monScripts/addMonsToInterface.js"></script>
+
+<script src="js-obys/monScripts/click.js"></script>
 
 </body>
 </html>
