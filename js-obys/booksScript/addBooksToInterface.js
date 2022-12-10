@@ -49,8 +49,9 @@
 
     }
 
+    // if($("#nBooksFound").text()=="0"){
 
+    //     location.reload();
+    //     console.log("error , no books found , reloading the page!");
 
-
-
-
+    // }

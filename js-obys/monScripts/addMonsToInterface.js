@@ -51,7 +51,15 @@
     }
 
 
+    // console.log(" size of db "+$("#nBooksFound").text());
 
+    // if($("#nBooksFound").text()=="0"){
+
+    //     location.reload();
+    //     console.log("error , no mons found , reloading the page!");
+
+    // }
+    
 
 
 
