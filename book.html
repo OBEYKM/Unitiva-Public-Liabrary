@@ -1,0 +1,325 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livros</title>
+
+    <link rel="icon" href="images/logoUnitiva.jfif">
+
+    <!-- css bootstap -->
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+   <!-- font-awesome icons -->
+   <link href="css/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all">
+   <!-- //font-awesome icons -->
+   <link href="css/blast.min.css" rel="stylesheet" />
+   <link rel="stylesheet" type="text/css" href="css/style10.css" />
+   <!--stylesheets-->
+   <link href="css/style.css" rel='stylesheet' type='text/css' media="all">
+
+<!-- fontawesome script  -->
+<script src="https://kit.fontawesome.com/783c6e185b.js" crossorigin="anonymous"></script>
+
+
+<!-- obys css  -->
+<link rel="stylesheet" href="css-obys/book.css">
+</head>
+
+
+<body>
+    
+    <section id="head" > 
+
+        <nav class="navbar navbar-dark " style="background-color:#c68b38;" >
+
+            <div class="container-fluid">
+
+                <a class="fa-sharp fa-solid fa-arrow-left"  href="index.html" ></a>
+
+
+                <div class="d-flex" style="text-align:right;">
+
+                    <div class="p-2">
+                        <img src="images/logoUnitiva.jfif" alt="" width="50rem">
+                    </div>
+                   
+
+                    <div class="p-2" style="text-align:center;">
+                        <h1 style="margin-top:1rem;">
+                            <a class="navbar-brand" > Biblioteca-Unitiva </a>
+                        </h1>
+                    </div>
+                  
+                    
+
+                </div>
+
+
+
+            </div>
+
+
+        </nav>
+
+
+    </section>
+
+
+    <section id="body">
+
+        <div style="padding:1rem 1rem;">
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" style="width:30%;" type="search" placeholder="Procurar Livros">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+
+        <div style="text-align:right; margin-right:2rem; font-family: 'Times New Roman', Times, serif; font-weight: bold; font-size: medium;">
+            <span>
+              <span>Livros : </span>  <span id="nBooksFound" >0</sapn>
+            </span>
+        </div>
+
+        <section id="books-view">
+
+            <div style="width:95%; background-color: aliceblue; margin:.4rem auto; padding:2rem; " >
+
+
+                <div class="row" id="bookContainer">
+
+                    <!-- <div class="col-md-6 col-lg-3 bookcell rowBook" >
+
+                            <img src="images/logoUnitiva.jfif" width="50%" alt=""> <br>
+                            <span class="bookName">Book Name1</span>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 bookcell rowBook">
+
+                        <img src="images/logoUnitiva.jfif" width="50%" alt=""> <br>
+                        <span>Book Name2</span>
+
+                    </div> -->
+
+                    <!-- <div class="col-md-6 col-lg-3 bookcell rowBook">
+
+                        <img src="images/logoUnitiva.jfif" width="50%" alt=""> <br>
+                        <span>Book Name3</span>
+
+                    </div>
+
+
+                    <div class="col-md-6 col-lg-3 bookcell rowBook">
+
+                        <img src="images/logoUnitiva.jfif" width="50%" alt=""> <br>
+                        <span>Book Name4</span>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 bookcell rowBook">
+
+                        <img src="images/logoUnitiva.jfif" width="50%" alt=""> <br>
+                        <span>Book Name5</span>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 bookcell rowBook">
+
+                        <img src="images/logoUnitiva.jfif" width="50%" alt=""> <br>
+                        <span>Book Name6</span>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 bookcell rowBook">
+
+                        <img src="images/logoUnitiva.jfif" width="50%" alt=""> <br>
+                        <span>Book Name67</span>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 bookcell rowBook">
+
+                        <img src="images/logoUnitiva.jfif" width="50%" alt=""> <br>
+                        <span>Book Name8</span>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 bookcell rowBook">
+
+                        <img src="images/logoUnitiva.jfif" width="50%" alt=""> <br>
+                        <span>Book Name9</span>
+
+                    </div>
+                   
+                    <div class="col-md-6 col-lg-3 bookcell rowBook">
+
+                        <img src="images/logoUnitiva.jfif" width="50%" alt=""> <br>
+                        <span>Book Name10</span>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 bookcell rowBook">
+
+                        <img src="images/logoUnitiva.jfif" width="50%" alt=""> <br>
+                        <span>Book Name11</span>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 bookcell rowBook">
+
+                        <img src="images/logoUnitiva.jfif" width="50%" alt=""> <br>
+                        <span>Book Name12</span>
+
+                    </div> -->
+
+                </div>
+
+
+            </div>
+
+            <div class="bottomControls">
+            
+                <span id="Pageinfo"> 1-19 </span>
+    
+                <button type="button" class="btn btn-outline-primary btnControl">prev</button>
+                <button type="button" class="btn btn-outline-primary btnControl">next</button>
+                
+    
+            </div>
+
+        </section>
+
+      
+
+
+    </section>
+
+
+    <section id="single-book">
+
+        <div>
+            <button style="margin-left:2rem;" id="backtoBooks" type="button" class="btn btn-outline-primary btnControl">back</button>
+        </div>
+        <div style="width:95%; background-color: aliceblue; margin:.4rem auto; padding:2rem;">
+            
+            
+            
+            <h2 id="titleBook">Hi , on single book!</h2>
+
+            
+            <div class="row">
+
+                <div class="col-lg-6 col-md-12">
+                    <!-- <img width="54%"  style="margin:2rem auto; text-align: center;" src="images/logoUnitiva.jfif" alt=""> -->
+
+                    <div class="row">
+
+                        <div class="col-lg-12" >
+
+                            <iframe id="bookSrc" style="height:20rem;"  width="100%" height="100%" src="" frameborder="1">
+                           
+                            </iframe>
+                        </div>
+                       
+    
+                    </div>
+                   
+                    <div class="class=col-lg-12">
+                        <button>
+                            <a style="color:#c68b38;" id="btnSrc" target="_blank" href="">view</a>
+                        </button>
+                    </div>
+                  
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div style="padding:0.3rem;">
+                        <h4>Autor:</h4>
+                        <p id="authorName">Name of the author</p>
+                    </div>
+
+                    <div style="padding:0.3rem;" >
+                        <h4>Ano (Edição):</h4>
+                        <p id="yearEdition">year</p>
+                    </div>
+
+                    <div style="padding:0.3rem;" >
+                        <h4>Referência bibliográfica:</h4>
+                        
+                        <ul id="bioRef">
+                            <li>Referência1</li>
+                            <li>Referência2</li>
+                            <li>Referência3</li>
+                            <li>Referência4</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+
+
+      
+
+       
+
+    </section>
+
+
+
+    <footer class="py-3">
+        <div class="container">
+          <div class="copy-agile-right text-center">
+            <div class="list-social-icons text-center py-lg-4 py-md-3 py-3">
+              <ul>
+                <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                <li><a href="#"><span class="fas fa-envelope"></span></a></li>
+                <li><a href="#"><span class="fas fa-rss"></span></a></li>
+                <li><a href="#"><span class="fab fa-vk"></span></a></li>
+              </ul>
+            </div>
+            <p> 
+              © 2022 Biblioteca-Unitiva. All Rights Reserved
+            </p>
+          </div>
+        </div>
+      </footer>
+
+
+
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- js bootstap  -->
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+<!-- obys js file -->
+
+
+
+<script src="js-obys/db.js"></script>
+
+<script src="js-obys/addBooks.js"></script>
+
+<script src="js-obys/booksScript/addBooksToInterface.js"></script>
+
+<script src="js-obys/events/click.js"></script>
+
+</body>
+</html>

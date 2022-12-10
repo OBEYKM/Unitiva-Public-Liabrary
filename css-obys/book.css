@@ -1,0 +1,43 @@
+
+
+
+#body{
+
+    background-color: #FAF8F1;
+    width: 100%;
+}
+
+.bookcell{
+    text-align: center;
+    padding:.5rem;
+}
+
+.bottomControls{
+
+    text-align: right;
+    padding:2rem;
+    
+
+}
+
+.btnControl{
+    width: 15%;
+}
+
+#pageinfo{
+    font-weight: 600;
+    font-size: large;
+    margin: 2rem;
+}
+
+
+.rowBook:hover{
+
+    border: solid #c68b38;
+
+}
+
+
+#single-book{
+    display: none;
+}
