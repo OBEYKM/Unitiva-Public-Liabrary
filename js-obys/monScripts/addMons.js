@@ -32,6 +32,22 @@ $(function () {
     );
 
 
+    addnewMons(
+        "PROPÓSTA DE UMA PLATAFORMA DE MARKETING DIGITAL PARA UMA ESCOLA DE CONDUÇÃO",
+        "dbfiles/mon/img/Monografia Aicha Pedro.png",
+        "dbfiles/mon/Monografia Aicha Pedro.pdf",
+        ["Maugente, Aicha Pedro. (2021). PROPOSTA DE UMA PLATAFORMA DE MARKETING DIGITAL PARA UMA ESCOLA DE CONDUÇÃO: Escola de Condução Malhampsene (2021)"],
+        "Aicha Pedro Maugente",
+        "Informática de Gestão"
+    );
 
+    addnewMons(
+        "SERVICO DE ENVIO AUTOMATIZADO DE COMUNICADOS EM UMA REDE ACADEMICA (CASO DE ESTUDO UNIVERSIDADE WUTIVI)",
+        "dbfiles/mon/img/SERVICO DE ENVIO AUTOMATIZADO DE COMUNICADOS EM UMA REDE ACADEMICA (CASO DE ESTUDO UNIVERSIDADE WUTIVI).png",
+        "dbfiles/mon/SERVICO DE ENVIO AUTOMATIZADO DE COMUNICADOS EM UMA REDE ACADEMICA (CASO DE ESTUDO UNIVERSIDADE WUTIVI)..pdf",
+        ["Matavele, Inocêncio Alcinda. (2022). SERVICO DE ENVIO AUTOMATIZADO DE COMUNICADOS EM UMA REDE ACADEMICA (CASO DE ESTUDO UNIVERSIDADE WUTIVI)."],
+        "Inocêncio Alcinda António José Matavele",
+        "Sistemas e Redes Computacionais"
+    );
 
 });

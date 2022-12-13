@@ -1,5 +1,7 @@
 
 
+const sizePerPage = 8;
+
     
 
     var books = {};
@@ -43,7 +45,7 @@
 
     
         if (containsBook(b)) {
-            console.log("book "+b.title+" already exists");
+            // console.log("book "+b.title+" already exists");
             return;
         }
         
@@ -80,7 +82,7 @@
 
     function containsBook(book){
 
-        console.log("=========== checking duplication =================");
+        // console.log("=========== checking duplication =================");
 
        let arrBooks =  JSON.parse(localStorage.getItem("books"))["arr"];
 
@@ -121,8 +123,124 @@
 
 
     function getNumberOfBooks(){
-        return getAllBooks.length;
+        return getAllBooks().length;
     }
+
+
+
+    ///////////////////////
+    //search bar algorithm
+    ///////////////////////
+
+
+    /// FUNCTION Deprecated...
+
+    // function giveIntialBooks(){
+
+
+    //     let books = getAllBooks();
+
+    //     let initialBooks = [];
+
+    //     if(getNumberOfBooks() < 8){
+
+    //         for (let index = 0; index < getNumberOfBooks(); index++) {
+            
+
+    //             initialBooks.push(books[index]);
+                
+                
+    //         }
+    
+    //         return initialBooks;
+    
+
+    //     }
+
+    //     for (let index = 0; index < 8; index++) {
+            
+
+    //         initialBooks.push(books[index]);
+            
+            
+    //     }
+
+    //     return initialBooks;
+
+    // }
+
+
+    // function getNumberOfPagesBook(){
+
+    //     let c = getNumberOfBooks()/sizePerPage;
+
+    //     let p = Math.ceil(c);
+    //     console.log("pages : "+p);
+
+    //     return p;
+
+    // }
+
+
+    function getNextBatchOfBooks(data){
+
+        // let pgTotal = Math.ceil(data.length/sizePerPage);
+
+        let bookGroup = chunkArrayInGroups(data , sizePerPage);
+
+        console.log("Creating "+bookGroup.length+" groups / pages");
+
+        return bookGroup;
+
+    }
+
+    function createGroups(arr, numGroups) {
+
+        const perGroup = Math.ceil(arr.length / numGroups);
+        return new Array(numGroups)
+          .fill('')
+          .map((_, i) => arr.slice(i * perGroup, (i + 1) * perGroup));
+
+    }
+
+    function chunkArrayInGroups(ar, num) {
+        return ar.reduce(function(r, v, i) {
+          if (i % num == 0) r.push(ar.slice(i, i + num));
+          return r;
+        }, []);
+      }
+
+
+    function getSearchBook( seqChar ){
+
+
+        let books = getAllBooks();
+        let newBooks = [];
+
+       
+ 
+        // console.log("Includes : "+ sl.includes("mun"));
+
+        for( book of books ){
+
+            
+            if (book.title.toLowerCase().includes(seqChar.toLowerCase())) {
+
+
+                newBooks.push(book);
+
+                
+            }
+
+        }
+
+        return newBooks;
+
+
+    }
+
+
+
 
     // TODO: make a funtion to query books based on sequence of caracters
     // TODO: make same fun as above but for monography
@@ -176,6 +294,7 @@ function addnewMons(title="", image="" , src="" , refbiography=[] , candidate=""
 
 
 function getAllMons(){
+    
     return JSON.parse(localStorage.getItem("mons"))["arr"];
 }
 
@@ -211,5 +330,57 @@ function containsMon(mon){
 
 //    localStorage.getItem("books");
    return false;
+
+}
+
+
+
+///////////////////
+/// search bar algorithm mon section
+//////////////////
+
+
+
+
+
+function getNextBatchOfMon(data){
+
+
+
+    let monGroup = chunkArrayInGroups(data , sizePerPage);
+
+    console.log("Creating "+monGroup.length+" groups / pages");
+
+    return monGroup;
+
+}
+
+
+
+function getSearchMon( seqChar ){
+
+
+    let mons = getAllMons();
+    let newMons = [];
+
+   
+
+    // console.log("Includes : "+ sl.includes("mun"));
+
+    for( mon of mons ){
+
+        
+        if (mon.title.toLowerCase().includes(seqChar.toLowerCase())) {
+
+
+            newMons.push(mon);
+
+            
+        }
+
+    }
+
+    return newMons;
+
 
 }

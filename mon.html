@@ -69,7 +69,7 @@
 
     <section id="body">
 
-        <div style="padding:1rem 1rem;">
+        <!-- <div style="padding:1rem 1rem;">
             <form class="d-flex" role="search">
                 <input class="form-control me-2" style="width:30%;" type="search" placeholder="Procurar monografia">
                 <button class="btn btn-outline-success" type="submit">Search</button>
@@ -80,6 +80,17 @@
             <span>
               <span>Monografias : </span>  <span id="nBooksFound" >0</sapn>
             </span>
+        </div> -->
+
+        <div class="row" >
+            <div class="col-sm-6 col-md-6 col-lg-6" style="text-align: left; padding: 2rem 0 0 2.4rem;">
+                <input class="form-control me-2" id="searchField" style="width:35%;" type="search" placeholder="Procurar Livros">
+            </div>
+            
+            <div class="col-sm-6 col-md-6 col-lg-6" style="text-align: right; padding:3rem 2.4rem 0 0;">
+                <span>Monografias : </span>  <span id="nBooksFound" >0</sapn>
+            </div>
+            
         </div>
 
         <section id="books-view">
@@ -181,10 +192,12 @@
 
             <div class="bottomControls">
             
-                <span id="Pageinfo"> 1-19 </span>
+                
     
-                <button type="button" class="btn btn-outline-primary btnControl">prev</button>
-                <button type="button" class="btn btn-outline-primary btnControl">next</button>
+                 
+                <button type="button" id="prevBatch"  class="btn btn-outline-primary btnControl"> <span aria-hidden="true">&laquo;</span> </button>
+                <span id="Pageinfo"> 1-19 </span>
+                <button type="button"  id="nextBatch" class="btn btn-outline-primary btnControl"> <span aria-hidden="true">&raquo;</span> </button>
                 
     
             </div>
@@ -200,7 +213,7 @@
     <section id="single-book">
 
         <div>
-            <button style="margin-left:2rem;" id="backtoBooks" type="button" class="btn btn-outline-primary btnControl">back</button>
+            <button style="margin-left:2rem;" id="backtoBooks" type="button" class="btn btn-outline-primary btnControl"> <span aria-hidden="true">&laquo;</span></button>
         </div>
         <div style="width:95%; background-color: aliceblue; margin:.4rem auto; padding:2rem;">
             

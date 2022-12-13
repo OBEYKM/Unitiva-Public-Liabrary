@@ -3,22 +3,145 @@
     
 
 
+  
+    // var pageNumber = 1;
+    
 
+    var lastBatch = null;
   
     var books = getAllBooks();
+
+   
+    var startControlNumber=0;
+
+    var lastBatch = getNextBatchOfBooks(books);
+
+   
+
+    console.log("startControlNumber = "+startControlNumber);
 
     $("#nBooksFound").text(books.length);
 
     
 
+    /////////////
+    // initializing books to interface
+    ////////////
+
+    addBookToInterface(lastBatch[startControlNumber]);
     
-    for( book of books ){
+    function addBookToInterface(data){
 
-     let div = createDivBook(book.title,book.image);
+        $("#bookContainer").html("");
 
-     $("#bookContainer").append(div);
+        for( book of data ){
+
+            let div = createDivBook(book.title,book.image);
+       
+            $("#bookContainer").append(div);
+
+           }
+
+           
+    }
+
+    setPageInfo(startControlNumber+1,lastBatch);
+
+    function setPageInfo(page=1 , book){
+
+        let info =  page + " - " + book.length;
+
+        console.log(info);
+
+        $("#Pageinfo").text(info);
+       
+        
+    }
+
+    function setCurrentBook(newBookS){
+         books = newBookS;
+        //  pageNumber=0;
+         startControlNumber=0;
+      
+         lastBatch = getNextBatchOfBooks(books);
+
+
+         addBookToInterface(lastBatch[startControlNumber]);
+ 
+         setPageInfo(startControlNumber+1 , lastBatch);
+ 
+         console.log(lastBatch);
+
+         initializeBookcellEvent();
+ 
+    }
+
+    function nextPage(){
+
+        if((startControlNumber+1) == lastBatch.length){
+            console.log("on the last page");
+            return;
+        }
+
+        // pageNumber++;
+        
+        startControlNumber++;
+
+        // lastBatch = getNextBatchOfBooks(books);
+
+        addBookToInterface(lastBatch[startControlNumber]);
+
+        setPageInfo(startControlNumber+1 , lastBatch);
+
+        console.log(lastBatch);
+       
 
     }
+
+    function prevPage(){
+
+        if(startControlNumber == 0){
+            console.log("on the first page");
+            return;
+        }
+
+
+        // pageNumber--;
+        startControlNumber--;
+
+        // let batch = getNextBatchOfBooks(startControlNumber,books);
+
+        addBookToInterface(lastBatch[startControlNumber]);
+
+        setPageInfo(startControlNumber+1,lastBatch);
+
+        console.log(lastBatch);
+       
+
+    }
+
+   
+
+
+
+    $("#nextBatch").click(function (e) { 
+        e.preventDefault();
+
+        nextPage();
+
+        initializeBookcellEvent();
+
+        
+    });
+
+    $("#prevBatch").click(function (e) { 
+        e.preventDefault();
+        
+        prevPage();
+
+        initializeBookcellEvent();
+
+    });
 
 
 
@@ -40,7 +163,7 @@
         div+="</div>"
 
 
-        console.log(div);
+        // console.log(div);
 
 
         return div;
@@ -49,9 +172,6 @@
 
     }
 
-    // if($("#nBooksFound").text()=="0"){
+  
 
-    //     location.reload();
-    //     console.log("error , no books found , reloading the page!");
-
-    // }
+    
