@@ -9,8 +9,7 @@
 
     var lastBatch = null;
   
-    var books = getAllBooks();
-
+    var books = getAllBooks();;
    
     var startControlNumber=0;
 
