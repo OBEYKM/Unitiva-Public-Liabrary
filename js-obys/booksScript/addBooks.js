@@ -51,6 +51,33 @@ $(function () {
         "2002"
     );
 
+    addnewBook(
+        "Mia Couto - O Fio das Missangas",
+        "dbfiles/books/img/Mia_Couto_O_Fio_das_Missangas.png",
+        "dbfiles/books/Mia_Couto_-_O_Fio_das_Missangas.pdf",
+        ["Couto, M. (2009). O fio das missangas. Editora Companhia das Letras."],
+        "Mia Couto",
+        "2009"
+    );
+
+    addnewBook(
+        "Cada Homem é uma Raça - Mia Couto",
+        "dbfiles/books/img/Cada Homem é uma Raça - Mia Couto.png",
+        "dbfiles/books/Cada Homem é uma Raça - Mia Couto.pdf",
+        ["Couto, M. (2013). Cada homem é uma raça: contos. Editora Companhia das Letras."],
+        "Mia Couto",
+        "2013"
+    );
+
+    addnewBook(
+        "cidades de Papel - John Green",
+        "dbfiles/books/img/cidades_de_papel_-_john_green.png",
+        "dbfiles/books/cidades_de_papel_-_john_green.pdf",
+        ["Green, J. (2013). Cidades de papel. Editora Intrinseca."],
+        "John Green",
+        "2013"
+    );
+
 
 
 
